@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html>
+    <head>
+        <title>TODO supply a title</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <style>
+            input[type=radio] + label {
+                cursor: pointer;
+            }
+            input[type=radio] {
+                position: absolute;
+                height: 1px; width: 1px;
+                clip: rect(0 0 1 1);
+            }
+            input[type=radio] + label::before {
+                content: "\00a0";  /* Non-breaking space */
+                border-radius: 10px;
+                display: inline-block;
+                width: 1em;  height: 1em; 
+                text-align: center;
+                line-height: 1em;
+                font-size: 0.8em;
+                margin-right: 10px;
+                background-color: #aaa;
+                border: 0.125em solid white;
+            }
+            input[type=radio]:checked + label::before {
+                content: "\2022";  /* Bullet */
+                color: white;
+                background: green;
+            }
+            input[type=radio]:focus + label::before {
+                box-shadow: 0 0 0 1px #888;
+            }
+
+
+        </style>
+    </head>
+    <body>
+        <p>Size:</p>
+        <div>
+            <input id="small" type="radio" name="size">
+            <label for="small">Small</label>
+        </div>
+        <div>
+            <input id="medium" type="radio" name="size">
+            <label for="medium">Medium</label>
+        </div>
+        <div>
+            <input id="large" type="radio" name="size">
+            <label for="large">Large</label>
+        </div>
+    </body>
+</html>

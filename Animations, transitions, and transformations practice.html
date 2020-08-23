@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html>
+    <head>
+        <title>TODO supply a title</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <style>
+            #welcome {
+   margin: 20px;
+   font: 20pt arial;
+   text-align: center;
+   animation: spin 1s linear;
+   
+}
+@keyframes spin {
+   0% {
+      transform: rotate(0degree);
+   }
+   50% {
+      transform: translate(60px);
+   }
+   100% {
+      transform: translate(0px);
+   }
+}
+.button {
+   margin: auto;
+   text-align: center;
+   vertical-align: middle;
+   width: 300px;
+   height: 60px; 
+   line-height: 60px;   
+   font: bold 28pt/150% arial;
+   border: solid 2px red;
+   box-shadow: 2px 2px 3px;
+   border-radius: 10px;   
+   background: radial-gradient(white, #bbb);
+   transition: all 100ms ease-in-out;
+   animation: wiggle 200ms linear 1s 2 reverse;
+}
+
+@keyframes wiggle {
+   0% {
+      transform: rotate(0deg);
+   }
+   25% {
+      transform: rotate(3deg);
+   }
+   75% {
+      transform: rotate(-3deg);
+   }
+   100% {
+      transform: rotate(0deg);
+   }
+}
+
+.button:hover {
+   transform: scale(1.05, 1.05);
+   color: red;  
+   cursor: pointer;
+}
+
+.button:active {
+   background: radial-gradient(#ddd, #999);
+   transform: scale(0.95, 0.95)
+}
+
+        </style>
+    </head>
+    <body>
+        <div id="welcome">Enter the exciting world of fantasy sports!</div>
+        <div class="button">Play Now!</div>
+
+    </body>
+</html>
